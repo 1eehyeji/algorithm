@@ -1,43 +1,6 @@
 package algorithm_pt;
 
 public class Excercise02_BST{
-	Node root;
-
-	public static boolean contains(Node root, int value) {
-		if(root == null)
-			return false;
-		if(root.value == value) {
-			return true;
-		}else if(root.value > value) {
-			return contains(root.leftChild, value);
-		}else {
-			return contains(root.rightChild, value);
-		}
-	}
-
-	public static void add(Node root, int value) {
-		if(root == null) {
-			Node nn = new Node(value);
-			root = nn;
-		} else {
-
-			if(root.value > value) {
-				add(root.leftChild, value);
-			}else if(root.value < value) {
-				add(root.rightChild, value);
-			}else {
-				System.out.println("이미 존재하는 값입니다.");
-			}
-
-		}
-	}
-
-	public boolean contains(int value) {
-		while(this != null) {
-
-		}
-		return true;
-	}
 
 	static class Node{
 		int value;
@@ -48,6 +11,47 @@ public class Excercise02_BST{
 			this.value = value;
 			this.leftChild = null;
 			this.rightChild = null;
+		}
+		
+		public boolean contains(Node root, int value) {
+			if(root == null)
+				return false;
+			if(root.value == value) {
+				return true;
+			}else if(root.value > value) {
+				return contains(root.leftChild, value);
+			}else {
+				return contains(root.rightChild, value);
+			}
+		}
+
+		public void add(int value) {
+			if (value<this.value) {
+				if (leftChild == null) leftChild = new Node(value);
+				else leftChild.add(value);
+			}else if(value > this.value) {
+				if(rightChild == null) rightChild = new Node(value);
+				else rightChild.add(value);
+			}
+		}
+
+		public boolean contains(int value) {
+			Node p = this;
+			
+			while(p != null) {
+				if(p.value == value) return true;
+				else if(p.value > value)
+					p = p.leftChild;
+				else
+					p = p.rightChild;
+			}
+			return false;
+		}
+		
+		public void print() {
+			if(leftChild != null) leftChild.print();
+				System.out.printf("%d ", value);
+			if(rightChild != null) rightChild.print();
 		}
 	}
 

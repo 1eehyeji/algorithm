@@ -26,7 +26,7 @@ public class chap02_01 {
 		return -1;
 	}
 
-	static int search2(int[] a, int value) {
+	static int search2(int[] a, int value) { //반복문
 		int start = 0;
 		int end = a.length - 1;
 
@@ -44,15 +44,14 @@ public class chap02_01 {
 		return search3(a, value, 0, a.length - 1);
 	}
 
-	static int search3(int[] a, int value, int start, int end) {
+	static int search3(int[] a, int value, int start, int end) { //재귀호출
 		if(start > end) {
 			return -1;
 		}else {
 			int middle = (start + end) / 2;
-
 			if(a[middle] > value) return search3(a, value, start, middle - 1);
 			else if(a[middle] < value) return search3(a, value, middle + 1, end);
-			else return middle;
+			else return middle; //else가 있어도 되고 없어도 됨
 		}
 	}
 

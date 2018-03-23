@@ -13,23 +13,15 @@ public class chap01_04 {
 		}
 
 		public void printAll() {
-			Node root = new Node(this.value, this.next);
-
-			while(root != null) {
-				System.out.print(root.value + " ");
-				root = root.next;
-			}
+			System.out.printf("%d ", this.value); 
+			if (next != null) next.printAll();
 		}
 
 		public void addTail(int value) {
-			Node root = new Node(this.value, this.next);
-
-			while(root != null) {
-				root = root.next;
+			if(next != null) next.addTail(value);
+			else {
+				next = new Node(value, null);
 			}
-
-			Node nn = new Node(value, null);
-			root = nn;
 		}
 	}
 
@@ -37,7 +29,7 @@ public class chap01_04 {
 
 		Node root = new Node(0, null);
 
-		for(int i=0; i<=10; ++i)
+		for(int i=1; i<=10; ++i)
 			root.addTail(i);
 
 		root.printAll();

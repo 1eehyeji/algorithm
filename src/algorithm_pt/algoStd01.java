@@ -8,11 +8,11 @@ public class algoStd01 {
 		// TODO Auto-generated method stub
 
 		Scanner scan = new Scanner(System.in);
-		
+
 		String s = scan.next();
 		
-		int a = s.charAt(0);
-		
+		int a = (int)s.charAt(0);
+
 		System.out.println(a);
 	}
 

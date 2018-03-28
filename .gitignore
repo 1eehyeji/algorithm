@@ -18,3 +18,7 @@
 *.zip
 *.tar.gz
 *.rar
+
+.setting
+.classpath
+.project

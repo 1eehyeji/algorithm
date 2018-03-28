@@ -2,14 +2,14 @@ package algorithm_pt;
 
 public class selectionSort_String {
 
-	static void selectionSort(String[] s) {
+	static void selectionSort(Comparable[] s) {
 		for(int i = 0; i < s.length; ++i) {
 			int minIdx = findMin(s, i);
 			swap(s, i, minIdx);
 		}
 	}
 
-	static int findMin(String[] s, int start) {
+	static int findMin(Comparable[] s, int start) {
 		int min = start;
 		for(int i = start + 1; i < s.length; ++i) {
 			if(s[min].compareTo(s[i]) > 0) {
@@ -19,8 +19,8 @@ public class selectionSort_String {
 		return min;
 	}
 	
-	static void swap(String[] s, int i, int j) {
-		String temp = s[i];
+	static void swap(Comparable[] s, int i, int j) {
+		Comparable temp = s[i];
 		s[i] = s[j];
 		s[j] = temp;
 	}

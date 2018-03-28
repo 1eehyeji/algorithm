@@ -2,13 +2,13 @@ package algorithm_pt;
 
 public class bubbleSort_String {
 
-	static void swap(String[] s, int i, int j) {
-		String temp = s[i];
+	static void swap(Comparable[] s, int i, int j) {
+		Comparable temp = s[i];
 		s[i] = s[j];
 		s[j] = temp;
 	}
 	
-	static void bubbleSort(String[] s) {
+	static void bubbleSort(Comparable[] s) {
 		boolean already = true;
 		
 		for(int i = s.length - 1; i > 0; --i) {

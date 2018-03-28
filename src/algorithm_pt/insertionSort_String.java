@@ -2,11 +2,11 @@ package algorithm_pt;
 
 public class insertionSort_String {
 
-	static void insertionSort(String[] s) {
+	static void insertionSort(Comparable[] s) {
 		
 		for(int i = 1; i < s.length; ++i) {
 			
-			String value = s[i];
+			Comparable value = s[i];
 			int j;
 			
 			for(j = i - 1; j >= 0; --j) {

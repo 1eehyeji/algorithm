@@ -8,7 +8,6 @@ public class WaterMelon {
 			if(i % 2 == 0) s += "수";
 			else s += "박";
 		}
-		
 		return s;
 	}
 

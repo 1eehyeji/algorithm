@@ -1,4 +1,4 @@
-package algorithm_pt;
+package codility;
 
 public class BinaryGap { 
 

@@ -28,7 +28,7 @@ public class BinaryGap {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.out.println(solution(4)); //0
+		System.out.println(solution(1041)); //0
 		System.out.println(solution(11240)); //1
 		System.out.println(solution(529)); //4
 

@@ -35,6 +35,7 @@ public class CountWord3 {
 		
 		CompareWord c = new CompareWord();
 		ArrayList<WordInfo> list = new ArrayList<>();
+		int total = 0;
 
 		while(scanner.hasNext("[a-zA-Z]+")) {
 			String s = scanner.next().toLowerCase();
@@ -42,6 +43,7 @@ public class CountWord3 {
 			WordInfo word = find(s,list);
 			if(word != null) ++word.count;
 			else {
+				++total;
 				list.add(new WordInfo(s));
 				Collections.sort(list, c);
 			}
@@ -54,6 +56,7 @@ public class CountWord3 {
 		CompareCount c2 = new CompareCount();
 		Collections.sort(list, c2);
 
+		System.out.println("총 단어 개수: " + total);
 		for(int i = 0; i < 10; ++i) {
 			System.out.println(list.get(i).word + " " + list.get(i).count);
 		}

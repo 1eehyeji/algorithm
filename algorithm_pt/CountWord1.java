@@ -16,12 +16,10 @@ public class CountWord1 {
 	      Scanner scanner = new Scanner(Paths.get(filePath));
 	      scanner.useDelimiter("[^a-zA-Z]+");
 	      
-	      int total = 0;
 	      
 	      HashMap<String, Integer> map = new HashMap<String, Integer>();
 	      
 	      while(scanner.hasNext("[a-zA-Z]+")) {
-	    	  ++total;
 	    	  String s = scanner.next().toLowerCase();
 	    	  Integer count = map.get(s);
 	    	  if(count == null) count = 0;
@@ -31,7 +29,7 @@ public class CountWord1 {
 	      
 	      scanner.close();
 	      
-	      System.out.println("총 단어 수: " + total);
+	      System.out.println("총 단어 수: " + map.size());
 	      
 	      Collection<Integer> c = map.values();
 	      Object[] a = c.toArray();

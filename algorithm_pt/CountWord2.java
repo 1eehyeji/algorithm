@@ -23,13 +23,17 @@ public class CountWord2 {
 		scanner.useDelimiter("[^a-zA-Z]+");
 
 		ArrayList<WordInfo> list = new ArrayList<>();
+		int total = 0;
 
 		while(scanner.hasNext("[a-zA-Z]+")) {
 			String s = scanner.next().toLowerCase();
 			//System.out.println(s);
 			WordInfo word = find(s,list);
 			if(word != null) ++word.count;
-			else list.add(new WordInfo(s));
+			else {
+				++total;
+				list.add(new WordInfo(s));
+			}
 		}
 
 		//for(int i = 0; i < list.size(); ++i) {
@@ -40,6 +44,7 @@ public class CountWord2 {
 		
 		list.sort(c);
 		
+		System.out.println("총 단어 개수: " + total);
 		for(int i = 0; i < 10; ++i) {
 			System.out.println(list.get(i).word + " " + list.get(i).count);
 		}

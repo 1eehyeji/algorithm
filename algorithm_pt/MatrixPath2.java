@@ -1,7 +1,8 @@
 package algorithm_pt;
 
 public class MatrixPath2 {
-	static int[][] m = { { 6, 7, 12, 5 }, 
+	static int[][] m = { 
+			{ 6, 7, 12, 5 }, 
 			{ 5, 3, 11, 18 }, 
 			{ 7, 17, 3, 3 },
 			{ 8, 10, 14, 9} };
@@ -18,15 +19,25 @@ public class MatrixPath2 {
 		else if (r > 0 && c == 0)
 			a[r][c] = m[r][c] + matrixPath(r - 1, c); // 왼쪽으로 이동이 불가능할 경우
 		else if (r == 0 && c > 0)
-			a[r][c] = m[r][c] + matrixPath(r, c - 1); // 위쪽으로 이동이 불가을할 경우		
+			a[r][c] = m[r][c] + matrixPath(r, c - 1); // 위쪽으로 이동이 불가능할 경우		
 		else 
 			a[r][c] = m[r][c] + Math.min(matrixPath(r-1, c), matrixPath(r, c-1));
 		return a[r][c];
 	}
-
+	
+	static void printPath(int r, int c) {
+		System.out.println("[" + r + ", " + c + "]");
+		if(r == 0 && c == 0) return;
+		else if(r == 0 && c > 0) printPath(r, c-1);
+		else if(r > 0 && c == 0) printPath(r-1, c);
+		else if(a[r][c-1] >= a[r-1][c]) printPath(r-1, c);
+		else printPath(r, c-1);
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(matrixPath(3, 3));
+		printPath(3,3);
 	}
 
 }

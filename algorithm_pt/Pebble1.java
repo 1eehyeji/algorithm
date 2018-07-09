@@ -56,10 +56,33 @@ public class Pebble1 {
 		return max;
 	}
 	
+	static boolean print(int c, int point) throws Exception{
+		String[] s = {"", "*", "  *", "   *", "*   *"};
+		for(int p = 1; p <= 4; ++p) {
+			if(a[c][p] == point && (c == 0  || print(c - 1, point - colPoint(c, p)))) {
+				System.out.printf("열:%d 패턴:%d 조약돌:%s\n", c, p, s[p]);
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	static void print() {
+		for(int i = 0; i < a.length; ++i) {
+			for(int j = 0; j < a[i].length; ++j) {
+				System.out.print(a[i][j] + " ");
+			}
+			System.out.println(" ");
+		}
+	}
+	
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println(maxPoint(7));
 		System.out.println(count);
+		
+		print();
+		print(7, maxPoint(7));
 	}
 
 }

@@ -185,3 +185,20 @@
 ### DivideAndConquer
 
 + 10815번 [숫자 카드](https://github.com/skhucode/skhucode-hyeji/blob/master/skhucode/src/skhucode/Collections/B10815.java)
++ 10816번 [숫자 카드 2](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/DivideAndConquer/B10816.java)
++ 11728번 [배열 합치기](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/DivideAndConquer/B11728.java)
++ 1780번 [종이의 개수](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/DivideAndConquer/B1780.java)
++ 11729번 [하노이 탑 이동 순서](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/DivideAndConquer/B11729.java)
++ 2263번 [트리의 순회](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/DivideAndConquer/B2263.java)
++ 1992번 [쿼드트리](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/DivideAndConquer/B1992.java)
++ 2447번 [별찍기 - 10](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/DivideAndConquer/B2447.java)
++ 2448번 [별찍기 - 11](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/DivideAndConquer/B2448.java)
++ 1074번 [Z](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/DivideAndConquer/B1074.java)
++ 1517번 [버블소트](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/DivideAndConquer/B1517.java)
++ 2261번 [가장 가까운 두 점](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/DivideAndConquer/B2261.java)
+
+
+
+### Binary Search
+
++ 1654번 [랜선자르기](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BinarySearch/B1654.java)

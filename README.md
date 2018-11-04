@@ -202,3 +202,6 @@
 ### Binary Search
 
 + 1654번 [랜선자르기](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BinarySearch/B1654.java)
++ 2805번 [나무 자르기](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BinarySearch/B2805.java)
++ 2110번 [공유기 설치](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BinarySearch/B2110.java)
++ 1939번 [중량제한](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BinarySearch/B1939.java)

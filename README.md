@@ -213,4 +213,5 @@
 ### Brute-Force Search
 
 + 11723번 [집합](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BruteForceSearch/B11723.java)
-
++ 10819번 [차이를 최대로](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BruteForceSearch/B10819.java)
++ 10971번 [외판원 순회 2](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BruteForceSearch/B10971.java)

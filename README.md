@@ -215,3 +215,6 @@
 + 11723번 [집합](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BruteForceSearch/B11723.java)
 + 10819번 [차이를 최대로](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BruteForceSearch/B10819.java)
 + 10971번 [외판원 순회 2](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BruteForceSearch/B10971.java)
++ 6603번 [로또](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BruteForceSearch/B6603.java)
++ 1697번 [숨바꼭질](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BruteForceSearch/B1697.java)
++ 1963번 [소수 경로](https://github.com/lwiiiiii/algorithm/blob/master/baekjoon/BruteForceSearch/B1963.java)

@@ -24,7 +24,7 @@ public class B1561 {
             return;
         }
 		
-		long max = 2000000000L * 30; // LÀ» ¾È¾²¸é ¾Èµ¹¾Æ°¨,, ¤Ì
+		long max = 2000000000L * 30; // Lì„ ì•ˆì“°ë©´ ì•ˆëŒì•„ê°,, ã…œ
 		long min = 0;
 		
 		while(min <= max) {
@@ -32,7 +32,7 @@ public class B1561 {
 			long end, begin = 0;
 			
 			end = m;
-			for(int i = 0; i < m; ++i) {	// midºĞ±îÁö Åº »ç¶÷ ¼ö
+			for(int i = 0; i < m; ++i) {	// midë¶„ê¹Œì§€ íƒ„ ì‚¬ëŒ ìˆ˜
 				end += mid/a[i];
 			}
 			begin = end;
@@ -41,7 +41,7 @@ public class B1561 {
 					--begin;
 				}
 			}
-			++begin;		// midºĞ¿¡ Åº »ç¶÷µé Áß Ã¹ ¹øÂ° »ç¶÷±îÁöÀÇ ¼ö
+			++begin;		// midë¶„ì— íƒ„ ì‚¬ëŒë“¤ ì¤‘ ì²« ë²ˆì§¸ ì‚¬ëŒê¹Œì§€ì˜ ìˆ˜
 			
 			if(n < begin) {
 				max = mid - 1;
@@ -49,7 +49,7 @@ public class B1561 {
 				min = mid + 1;
 			} else {
 				for(int i = 0; i < m; ++i) {
-					if(mid % a[i] == 0) {	// ¸î ¹øÂ° ±â±¸¿¡ ÅÀ´ÂÁö Ã£À½
+					if(mid % a[i] == 0) {	// ëª‡ ë²ˆì§¸ ê¸°êµ¬ì— íƒ”ëŠ”ì§€ ì°¾ìŒ
 						if(begin == n) {
 							System.out.println(i + 1);
 							return;

@@ -3,7 +3,7 @@ package baekjoon.Math;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-// ¿ÏÀüÁ¦°ö¼ö
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 public class B1977 {
 
 	public static void main(String[] args) throws Exception{

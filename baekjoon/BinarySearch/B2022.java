@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-// »ï°¢Çü ´àÀ½À» ÀÌ¿ëÇØ¼­ ÇØ°á,,
+// ì‚¼ê°í˜• ë‹®ìŒì„ ì´ìš©í•´ì„œ í•´ê²°,,
 public class B2022 {
 
 	public static void main(String[] args) throws Exception{
@@ -18,7 +18,7 @@ public class B2022 {
 		double min = 0;
 		double max = Math.min(x, y);
 		
-		for(int i = 0; i < 10000; ++i) { // °ªÀÌ ¼Ò¼öÀÏ ¼ö ÀÖ±â ¶§¹®¿¡ min <= max·Î Ç¥ÇöÇÒ ¼ö ¾øÀ½
+		for(int i = 0; i < 10000; ++i) { // ê°’ì´ ì†Œìˆ˜ì¼ ìˆ˜ ìˆê¸° ë•Œë¬¸ì— min <= maxë¡œ í‘œí˜„í•  ìˆ˜ ì—†ìŒ
 			double mid = (min + max) / 2.0;
 			double h1 = Math.sqrt((x * x) - (mid * mid));
 			double h2 = Math.sqrt((y * y) - (mid * mid));

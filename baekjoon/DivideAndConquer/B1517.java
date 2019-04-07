@@ -60,7 +60,9 @@ public class B1517 {
 		int n = Integer.parseInt(br.readLine());
 
 		StringTokenizer st = new StringTokenizer(br.readLine());
+
 		a = new int[n];
+
 		for(int i = 0; i < n; ++i) {
 			a[i] = Integer.parseInt(st.nextToken());
 		}

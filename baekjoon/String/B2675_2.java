@@ -42,5 +42,6 @@ public class B2675_2 {
 		}
 
 		System.out.println(sb.toString());
+
 	}
 }

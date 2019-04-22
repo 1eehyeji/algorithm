@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.Loop;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.Math;
 
 import java.util.ArrayList;
 import java.util.List;

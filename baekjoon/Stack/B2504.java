@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.Stack;
 
 
 import java.io.BufferedReader;

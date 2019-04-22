@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon.Rule;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

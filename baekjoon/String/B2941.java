@@ -19,23 +19,23 @@ public class B2941 {
 
 		String word = br.readLine();
 		String[] croatianAlphabet = { "dz=", "c=", "c-", "d-", "lj", "nj", "s=", "z=" };
-		int countAlphabet = 0;
+		//int countAlphabet = 0;
 
 		for(String s : croatianAlphabet) {
 			while (word.contains(s)) {	// 문자열에 해당 크로아티아 알파벳이 포함되어 있으면 반복
 				word = word.replaceFirst(s, " ");		// 공백처리
 
-				++countAlphabet;
+				//++countAlphabet;
 			}
 		}
 
-		for(int i = 0; i < word.length(); ++i) { // 남은 알파벳 개수
+		/*for(int i = 0; i < word.length(); ++i) { // 남은 알파벳 개수
 			if(word.charAt(i) != ' ') {
 				++countAlphabet;
 			}
-		}
+		}*/
 
-		System.out.println(countAlphabet);
+		System.out.println(word.length());
 
 		br.close();
 	}

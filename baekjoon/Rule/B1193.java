@@ -24,7 +24,7 @@ public class B1193 {
 		int numerator = 1;
 
 		// 1/n 에서 n/1 혹은 n/1에서 1/n으로 번호가 커지는 경로를 대각선이라고 표현하면
-		int maxNumber = 1;	// 현재 대각성 경로에서 가장 큰 번호 (해당 번호의 분수는 1/n 또는 n/1 형태)
+		int maxNumber = 1;	// 현재 대각선 경로에서 가장 큰 번호 (해당 번호의 분수는 1/n 또는 n/1 형태)
 		int count = 1;		// 지나온 대각선 경로의 수
 
 		while(maxNumber < X) {
@@ -34,9 +34,9 @@ public class B1193 {
 
 		int minusValue = maxNumber - X;	// 구하려는 번호와 가장 큰 번호의 차를 구함
 
-		if(count % 2 == 0) {    // 짝수 번 대각선 이동한 경우 (가장 큰 번호에 해당하는 분수는 count/1)
-			denominator += minusValue;    // 작은 번호로 이동할수록 분모 값 증가
-			numerator = count - minusValue;        // 작은 번호로 이동할수록 분자 값 감소
+		if(count % 2 == 0) {	// 짝수 번 대각선 이동한 경우 (가장 큰 번호에 해당하는 분수는 count/1)
+			denominator += minusValue;	// 작은 번호로 이동할수록 분모 값 증가
+			numerator = count - minusValue;	// 작은 번호로 이동할수록 분자 값 감소
 		}
 		else {	// 홀수 번 대각선 이동한 경우 (가장 큰 번호에 해당하는 분수는 1/count)
 			denominator = count - minusValue;	// 짝수 경우와 반대

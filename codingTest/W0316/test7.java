@@ -1,4 +1,4 @@
-package test0316;
+package codingTest.W0316;
 
 public class test7 {
 

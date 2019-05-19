@@ -16,13 +16,18 @@ public class B1475 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		String roomNumber = br.readLine();
+		int roomNumber = Integer.parseInt(br.readLine());
 
 		int[] numbers = new int[10];
 
-		for (int i = 0; i < roomNumber.length(); ++i) {
+		/*for (int i = 0; i < roomNumber.length(); ++i) {
 			int index = Integer.parseInt(roomNumber.charAt(i) + "");
 			++numbers[index];
+		}*/
+
+		while(roomNumber > 0) {
+			++numbers[roomNumber % 10];
+			roomNumber /= 10;
 		}
 
 		int max = Integer.MIN_VALUE;

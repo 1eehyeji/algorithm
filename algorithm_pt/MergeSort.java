@@ -19,7 +19,7 @@ public class MergeSort {
 		int i = 0;
 		int idx1 = start;
 		int idx2 = middle + 1;
-		
+
 		while(idx1 <= middle && idx2 <= end) {
 			if(a[idx1] < a[idx2])
 				temp[i++] = a[idx1++];
@@ -32,16 +32,16 @@ public class MergeSort {
 			temp[i++] = a[idx2++];
 		for(i = 0; i < temp.length; ++i)
 			a[start + i] = temp[i];
-		
+
 	}
-	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		int[] a1 = { 8, 7, 6, 5, 4, 3, 2, 1};
 		mergeSort(a1, 0, a1.length - 1);
 		System.out.println(Arrays.toString(a1));
-		
+
 		int[] a2 = { 2, 1, 6, 8, 3, 5, 4, 7};
 		mergeSort(a2, 0, a2.length - 1);
 		System.out.println(Arrays.toString(a2));

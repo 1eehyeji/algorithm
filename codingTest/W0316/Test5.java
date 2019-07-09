@@ -1,6 +1,6 @@
 package codingTest.W0316;
 
-public class test5 {
+public class Test5 {
 
     public static int solution(int number) {
         int answer = 0;

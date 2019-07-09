@@ -1,6 +1,6 @@
 package codingTest.W0316;
 
-public class test3 {
+public class Test3 {
 
     public static String solution(String word) {
         StringBuilder sb = new StringBuilder();

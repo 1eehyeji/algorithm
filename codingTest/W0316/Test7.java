@@ -1,6 +1,6 @@
 package codingTest.W0316;
 
-public class test7 {
+public class Test7 {
 
     public static String solution(String cryptogram) {
         String[] answer = new String[cryptogram.length()];

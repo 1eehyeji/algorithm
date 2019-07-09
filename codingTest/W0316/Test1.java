@@ -1,6 +1,6 @@
 package codingTest.W0316;
 
-public class test1 {
+public class Test1 {
 
     public static int[] solution(int money) {
         int[] answer = new int[9];

@@ -1,6 +1,6 @@
 package codingTest.W0316;
 
-public class test4 {
+public class Test4 {
 
     public static int solution(int[] pobi, int[] crong) {
         int answer = 0;

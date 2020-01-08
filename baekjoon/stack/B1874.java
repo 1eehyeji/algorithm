@@ -11,10 +11,9 @@ import java.util.Stack;
 /* 1874번 스택 수열
 *
 * 처음엔 push와 pop을 할 때마다 문자열에 +, -를 추가했는데
-* 이렇게 구현하니 메모리 초과가 발생했다.
-* BufferedWriter를 사용하여 메모리 문제를 해결했다.
+* 이렇게 구현하니 메모리 초과가 발생했고, BufferedWriter를 사용하여 메모리 문제를 해결했다.
 * 출력과정에서 flush와 System.out.print를 섞어서 사용하니 출력초과 문제가 발생했다.
-* flush만 사용하도록 수정하니 출력초과 문제가 해결되었다.
+* flush만 사용하니 출력초과 문제가 해결되었다.
 * */
 public class B1874 {
 

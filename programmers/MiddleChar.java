@@ -14,6 +14,8 @@ public class MiddleChar {
 	      } else {
 	    	  answer = s.substring(middle-1, middle+1);
 	      }
+
+	      //answer = (s.length() % 2 ) != 0 ? s.substring(middle, middle + 1) : s.substring(middle - 1, middle + 1);
 	      
 	      return answer;
 	  }

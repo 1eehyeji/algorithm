@@ -10,25 +10,22 @@ import java.util.Arrays;
 class GCDandLCM {
     public int[] gcdlcm(int a, int b) {
         int[] answer = new int[2];
-        int num1 = a > b ? a : b; // a, b 중 큰 값을 num1에 저장
-        int num2 = a <= b ? a : b;
-        
-        //메소드 추가가 가능하면 재귀함수로 하는게 간단할 듯
+        int num1 = Math.max(a, b);
+        int num2 = Math.min(a, b);
+
         while(num2 != 0) {
-        	int r = (num1 % num2);
-        	num1 = num2;
-        	num2 = r;
+            int r = (num1 % num2);
+            num1 = num2;
+            num2 = r;
         }
         
         answer[0] = num1;
-        answer[1] = (a * b)/num1; //최소공배수
+        answer[1] = (a * b) / num1;
         
         return answer;
     }
 
-    // 아래는 테스트로 출력해 보기 위한 코드입니다.
     public static void main(String[] args) {
-        GCDandLCM c = new GCDandLCM();
-        System.out.println(Arrays.toString(c.gcdlcm(3, 12)));
+
     }
 }

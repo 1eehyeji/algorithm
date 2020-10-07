@@ -7,7 +7,7 @@ import java.util.Map;
 	프로그래머스 고득점 키트
 	해시 - 완주하지 못한 선수
  */
-public class KitHash1 {
+public class 완주하지못한선수 {
 
 	public static String solution(String[] participant, String[] completion) {
 		String answer = "";

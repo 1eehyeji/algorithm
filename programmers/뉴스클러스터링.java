@@ -9,8 +9,8 @@ public class 뉴스클러스터링 {
 		Map<String, Integer> str1Tokens = getTokens(str1.toLowerCase());
 		Map<String, Integer> str2Tokens = getTokens(str2.toLowerCase());
 
-		float intersectionSize = 0;
-		float unionSize = 0;
+		double intersectionSize = 0;
+		double unionSize = 0;
 
 		for (String key : str1Tokens.keySet()) {
 			Integer count1 = str2Tokens.get(key);

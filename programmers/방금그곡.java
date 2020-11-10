@@ -4,15 +4,22 @@ import java.util.*;
 
 public class 방금그곡 {
 	static String solution(String m, String[] musicinfos) {
-		m = convertSharpNote(m);
+		Map<String, String> sharpNotes = new HashMap<>();
+		sharpNotes.put("C#", "c");
+		sharpNotes.put("D#", "d");
+		sharpNotes.put("F#", "f");
+		sharpNotes.put("G#", "g");
+		sharpNotes.put("A#", "a");
+
+		String convertedM = convertSharpNote(m, sharpNotes);
 		List<MusicInfo> matchedMusics = new ArrayList<>();
 
 		for (String info : musicinfos) {
 			String[] infoToken = info.split(",");
 			MusicInfo musicInfo = new MusicInfo(infoToken[0].split(":"), infoToken[1].split(":"),
-					infoToken[2], convertSharpNote(infoToken[3]));
+					infoToken[2], convertSharpNote(infoToken[3], sharpNotes));
 
-			if (musicInfo.playedNotes.contains(m)) {
+			if (musicInfo.playedNotes.contains(convertedM)) {
 				matchedMusics.add(musicInfo);
 			}
 		}
@@ -25,14 +32,7 @@ public class 방금그곡 {
 	}
 
 	// C#, D#, F#, G#, A# -> c, d, f, g, a
-	static String convertSharpNote(String m) {
-		Map<String, String> sharpNotes = new HashMap<>();
-		sharpNotes.put("C#", "c");
-		sharpNotes.put("D#", "d");
-		sharpNotes.put("F#", "f");
-		sharpNotes.put("G#", "g");
-		sharpNotes.put("A#", "a");
-
+	static String convertSharpNote(String m, Map<String, String> sharpNotes) {
 		for (String note : sharpNotes.keySet()) {
 			m = m.replaceAll(note, sharpNotes.get(note));
 		}

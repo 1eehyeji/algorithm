@@ -17,6 +17,11 @@ public class B1074 {
 			return;
 		}
 
+		if (!(i <= r && r < i + n && j <= c && c < j + n)) {
+			count += n * n;
+			return;
+		}
+
 		int m = n/2;
 		solve(i , j, m);	//왼쪽 위
 		solve(i , j+m, m);	// 오른쪽 위

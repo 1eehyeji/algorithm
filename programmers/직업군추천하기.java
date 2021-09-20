@@ -10,7 +10,7 @@ public class 직업군추천하기 {
         int maxScore = 0;
 
         String[] jobs = new String[table.length];
-        Map[] langPoint = new HashMap[table.length];
+        Map<String, Integer>[] langPoint = new HashMap[table.length];
 
         for (int i = 0; i < table.length; ++i) {
             String[] tokens = table[i].split(" ");
@@ -24,14 +24,12 @@ public class 직업군추천하기 {
         for (int i = 0; i < langPoint.length; ++i) {
             int score = 0;
             for (int j = 0; j < languages.length; ++j) {
-                score += (Integer) langPoint[i].getOrDefault(languages[j], 0) * preference[j];
+                score += langPoint[i].getOrDefault(languages[j], 0) * preference[j];
             }
 
-            if (maxScore < score) {
+            if (maxScore <= score) {
+                answer = (maxScore == score && answer.compareTo(jobs[i]) < 0) ? answer : jobs[i];
                 maxScore = score;
-                answer = jobs[i];
-            } else if (maxScore == score) {
-                answer = answer.compareTo(jobs[i]) < 0 ? answer : jobs[i];
             }
         }
 

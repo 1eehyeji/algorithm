@@ -3,7 +3,6 @@ package baekjoon.stack;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Comparator;
 import java.util.Stack;
 
 // 문자열 폭발

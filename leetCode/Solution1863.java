@@ -6,9 +6,7 @@ public class Solution1863 {
     int answer = 0;
 
     public int subsetXORSum(int[] nums) {
-        for (int i = 0; i < nums.length; ++i) {
-            subsetXORSum(nums, i, nums[i]);
-        }
+        subsetXORSum(nums, 0, 0);
 
         return answer;
     }
@@ -16,8 +14,8 @@ public class Solution1863 {
     private void subsetXORSum(int[] nums, int i, int sum) {
         answer += sum;
 
-        for (int j = i + 1; j < nums.length; ++j) {
-            subsetXORSum(nums, j, sum ^ nums[j]);
+        for (int j = i; j < nums.length; ++j) {
+            subsetXORSum(nums, j + 1, sum ^ nums[j]);
         }
     }
 }

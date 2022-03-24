@@ -35,25 +35,26 @@ public class Solution2101 {
 
         for (int i = 0; i < bombs.length; ++i) {
             isChecked = new boolean[bombs.length];
-            isChecked[i] = true;
-
-            Queue<Integer> queue = new LinkedList<>(graph[i]);
-
-            int count = 1;
-
-            while (!queue.isEmpty()) {
-                if (!isChecked[queue.peek()]) {
-                    ++count;
-                    isChecked[queue.peek()] = true;
-                    queue.addAll(graph[queue.peek()]);
-                }
-                queue.poll();
-            }
-
-            max = Math.max(max, count);
+            max = Math.max(max, dfs(graph, isChecked, i));
         }
 
         return max;
+    }
+
+    private static int dfs(List<Integer>[] graph, boolean[] isChecked, int n) {
+        if (isChecked[n]) {
+            return 0;
+        }
+
+        isChecked[n] = true;
+
+        int count = 1;
+
+        for (int i = 0; i < graph[n].size(); ++i) {
+            count += dfs(graph, isChecked, graph[n].get(i));
+        }
+
+        return count;
     }
 
     public static void main(String[] args) {

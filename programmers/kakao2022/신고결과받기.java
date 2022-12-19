@@ -1,32 +1,39 @@
 package programmers.kakao2022;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class 신고결과받기 {
 
-    public static int[] solution(String[] id_list, String[] report, int k) {
+    public static int[] solution(String[] id_list, String[] reports, int k) {
         int[] answer = new int[id_list.length];
 
-        Map<String, Integer> reportedCountMap = new HashMap<>();
-
-        for (int i = 0; i < report.length; ++i) {
-            String[] arr = report[i].split(" ");
-            reportedCountMap.put(arr[1], reportedCountMap.getOrDefault(arr[1], 0) + 1);
-        }
-
-        Map<String, Integer> mailCountMap = new HashMap<>();
-
-        for (int i = 0; i < report.length; ++i) {
-            String[] arr = report[i].split(" ");
-            if (reportedCountMap.get(arr[1]) >= k) {
-                mailCountMap.put(arr[0], mailCountMap.getOrDefault(arr[0], 0) + 1);
-            }
-        }
+        Map<String, Integer> userIndexMap = new HashMap<>();
 
         for (int i = 0; i < id_list.length; ++i) {
-            answer[i] = mailCountMap.getOrDefault(id_list[i], 0);
+            userIndexMap.put(id_list[i], i);
+        }
+
+        Map<String, Set<String>> reportedUserMap = new HashMap<>();
+
+        // Set을 사용하지 않고 주어진 신고내역 자체에서 중복을 제거하는 방법
+        // stream의 distinct를 사용
+        //List<String> distinctReport = Arrays.stream(reports).distinct().collect(Collectors.toList());
+
+        for (String report : reports) {
+            String[] reportToken = report.split(" ");
+
+            reportedUserMap.put(reportToken[1],
+                    reportedUserMap.getOrDefault(reportToken[1], new HashSet<>()));
+            reportedUserMap.get(reportToken[1]).add(reportToken[0]);
+        }
+
+        for (Map.Entry<String, Set<String>> entry : reportedUserMap.entrySet()) {
+            if (entry.getValue().size() < k) continue;
+
+            for (String user : entry.getValue()) {
+                answer[userIndexMap.get(user)] += 1;
+            }
         }
 
         return answer;
